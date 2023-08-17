@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
+<<<<<<< HEAD
 app.use(cors());
 
 // Middleware untuk mengizinkan CORS
@@ -9,6 +10,14 @@ app.use((req, res, next) => {
     // Ganti 'https://qouteislam.vercel.app' dengan domain Anda
     res.setHeader('Access-Control-Allow-Origin', 'https://qouteislam.vercel.app');
     next();
+=======
+
+// Middleware untuk mengizinkan CORS
+app.use((req, res, next) => {
+  // Ganti 'https://qouteislam.vercel.app' dengan domain Anda
+  res.setHeader('Access-Control-Allow-Origin', 'https://qouteislam.vercel.app');
+  next();
+>>>>>>> 6efa4c3047b1848d8e2674c23e4e15dbf8d6773b
 });
 
 app.get('/data', (req, res) => {
@@ -126,5 +135,10 @@ app.get('/data', (req, res) => {
 
 // Jalankan server
 app.listen(3000, () => {
+<<<<<<< HEAD
     console.log('Server is running on port 3000');
 });
+=======
+  console.log('Server is running on port 3000');
+});
+>>>>>>> 6efa4c3047b1848d8e2674c23e4e15dbf8d6773b
